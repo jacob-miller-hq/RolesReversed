@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
         controller.hoard = hoard;
         
         DamageTag sword = newEnemy.GetComponentInChildren<DamageTag>();
-        sword.damageAmt = baselineDamage + (goldAmt / 10);
+        sword.damageAmt = baselineDamage + (goldAmt / 50);
         sword.timePerHit = baselineAttackSpeed - (goldAmt / 100);
     }
 }

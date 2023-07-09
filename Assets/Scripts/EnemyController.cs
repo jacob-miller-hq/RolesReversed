@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -60,7 +61,7 @@ public class EnemyController : MonoBehaviour
         if (amtStolen > 0)
         {
             hoard.GetComponentInChildren<PileOfGold>().amount -= amtStolen;
-            GameObject loot = Instantiate(pileOfGoldPrefab);
+            GameObject loot = pileOfGoldPrefab;
             loot.GetComponent<PileOfGold>().amount = amtStolen;
             GetComponent<DropOnDestroy>().drops.Add(loot);
         }

@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DragonScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 31a77a91c86a5704cb5146c63b4be5b1
+  - enabled: 1
+    path: Assets/Scenes/DragonScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Slain.unity
     guid: 9d7b48314f00ad242be396722b4f46a7

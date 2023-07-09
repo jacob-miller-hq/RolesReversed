@@ -1407,7 +1407,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.6, y: 2.4}
+  m_Size: {x: 0.4, y: 2}
   m_Direction: 0
 --- !u!114 &1391738039
 MonoBehaviour:
@@ -1481,10 +1481,10 @@ MonoBehaviour:
   path: {fileID: 302951240}
   hoard: {fileID: 2001135411}
   minSpawnTime: 2
-  baselineSpawnTime: 1
-  jostleTime: 1.5
+  baselineSpawnTime: 10
+  jostleTime: 3
   baselineSpeed: 0.02
-  baselineDamage: 2
+  baselineDamage: 1
   baselineAttackSpeed: 2
 --- !u!4 &1504443053
 Transform:
