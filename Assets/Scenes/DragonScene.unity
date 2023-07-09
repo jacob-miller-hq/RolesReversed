@@ -1089,7 +1089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
+  m_AnchoredPosition: {x: 0, y: 225}
   m_SizeDelta: {x: 300, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303101513
@@ -1208,6 +1208,8 @@ GameObject:
   - component: {fileID: 1391738037}
   - component: {fileID: 1391738038}
   - component: {fileID: 1391738039}
+  - component: {fileID: 1391738040}
+  - component: {fileID: 1391738041}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1420,6 +1422,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxCarry: 200
+--- !u!114 &1391738040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391738030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1684f616f42b2a4d9aec2c4ccbc3c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1391738041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391738030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79289306388861f418a158e82569a6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops: []
+  shouldDrop: 1
 --- !u!1 &1504443051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1481,7 @@ MonoBehaviour:
   path: {fileID: 302951240}
   hoard: {fileID: 2001135411}
   minSpawnTime: 2
-  baselineSpawnTime: 10
+  baselineSpawnTime: 1
   jostleTime: 1.5
   baselineSpeed: 0.02
   baselineDamage: 2
@@ -1617,7 +1645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 200}
+  m_AnchoredPosition: {x: -150, y: 225}
   m_SizeDelta: {x: 300, y: 10}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1878752664

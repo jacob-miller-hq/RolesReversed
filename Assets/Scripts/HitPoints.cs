@@ -22,6 +22,7 @@ public class HitPoints : MonoBehaviour
     public bool damage(int amount)
     {
         hitPoints -= amount;
+        hitPoints = Mathf.Max(hitPoints, 0);
         return hitPoints <= 0;
     }
 
