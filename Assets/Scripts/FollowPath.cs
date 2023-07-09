@@ -28,13 +28,14 @@ public class FollowPath : MonoBehaviour
     {
         if (done || nextPoint >= pathPoints.Length)
         {
+            Debug.Log("done");
             done = true;
             return;
         }
-        if (Vector2.Distance(pathPoints[nextPoint].position, transform.position) < speed)
+        transform.position = Vector2.MoveTowards(transform.position, pathPoints[nextPoint].position, speed);
+        if (Vector2.Distance(pathPoints[nextPoint].position, transform.position) < Vector2.kEpsilon)
         {
             nextPoint = nextPoint + 1;
         }
-        transform.position = Vector2.MoveTowards(transform.position, pathPoints[nextPoint].position, speed);
     }
 }

@@ -5,8 +5,9 @@ using UnityEngine;
 public class HitPoints : MonoBehaviour
 {
     public int maxHitPoints = 10;
+    public GameObject hpBar;
 
-    public int hitPoints;
+    int hitPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,19 @@ public class HitPoints : MonoBehaviour
         return hitPoints <= 0;
     }
 
+    public void heal(int amount)
+    {
+        // Debug.Log("Healing: " + amount + " hit points -- " + hitPoints + "/" + maxHitPoints);
+        hitPoints = Mathf.Min(hitPoints + amount, maxHitPoints);
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (hpBar != null)
+        {
+            hpBar.transform.localScale = new Vector2((float) hitPoints / maxHitPoints, 1);
+        }
         if (hitPoints <= 0) {
             Destroy(gameObject);
         }

@@ -25,7 +25,6 @@ public class DamageTag : MonoBehaviour
     {
         if (targets.Count > 0 && Time.time - lastHitTime >= timePerHit)
         {
-            Debug.Log("Hitting " + targets.Count + " targets.");
             hit();
         }
     }
@@ -41,17 +40,14 @@ public class DamageTag : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag + " entered.");
         if (targetTag == other.gameObject.tag)
         {
-            Debug.Log("Adding to targets");
             targets.Add(other.gameObject);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log(other.gameObject.tag + " exited.");
         targets.Remove(other.gameObject);
     }
 }
